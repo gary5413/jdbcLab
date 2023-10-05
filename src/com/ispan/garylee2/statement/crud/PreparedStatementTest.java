@@ -44,14 +44,12 @@ public class PreparedStatementTest {
 			System.out.println("用户名或密码错误！");
 		}
 	}
-	
 	public <T> T getInstance(Class<T> clazz,String sql,Object...args ) {
 		Connection conn =null;
 		PreparedStatement pstmt =null;
 		ResultSet rs =null;
 		try {
 			conn = JDBCutils.getConnection();
-			
 			pstmt = conn.prepareStatement(sql);
 			for(int i=0;i<args.length;i++) {
 				pstmt.setObject(i+1, args[i]);
@@ -63,15 +61,12 @@ public class PreparedStatementTest {
 			int columnCount = metaData.getColumnCount();
 			if(rs.next()) {
 //		這邊複製過來會有問題 改成泛型寫法
-				
 				T t=clazz.newInstance(); 
-				
 				for(int i=0;i<columnCount;i++) {
 					Object columValue = rs.getObject(i+1);
 					//獲取每個列的列名
 					//使用getColumnLabel() 獲取別名
 					String columnLabel = metaData.getColumnLabel(i+1);
-					
 //				給clazz物件指定屬性 賦值為value  
 //				如何操作 通過反射
 					java.lang.reflect.Field field = clazz.getDeclaredField(columnLabel);
