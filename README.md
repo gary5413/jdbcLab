@@ -9,6 +9,6 @@
 	- 10/11 
 		- 新增Exer2Test class
 		- 更新maven project	
-
+	- 10/12 更新Exer2Test 新增Student 新增查詢功能
 ### 目錄
 待更新
