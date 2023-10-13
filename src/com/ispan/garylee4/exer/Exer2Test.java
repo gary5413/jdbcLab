@@ -136,4 +136,38 @@ public class Exer2Test {
 			}
 			return null;
 		}
+		/*
+		 * 功能3 刪除功能
+		 */
+		@Test
+		public void testDeleteByExamCard() {
+			System.out.println("請輸入學生准考證號碼");
+			Scanner scanner = new Scanner(System.in);
+			String examCard = scanner.next();
+			String sql="SELECT FlowID flowID,Type type,IDCard iDCard,ExamCard examCard,StudentName name,Location location,Grade grade "
+					+ "FROM examstudent WHERE examCard = ? ";
+			Student student = getInstance(Student.class, sql, examCard);
+			if(student ==null) {
+				System.out.println("輸入錯誤，請重新輸入");
+			}else {
+				String sql1="DELETE FROM examstudent WHERE examCard=?";
+				int deleteCount =update(sql1, examCard);
+				if(deleteCount >0) {
+					System.out.println("刪除成功");
+				}
+			}
+		}
+		@Test
+		public void testDeleteByExamCard1() {
+			System.out.println("請輸入學生准考證號碼");
+			Scanner scanner = new Scanner(System.in);
+			String examCard = scanner.next();
+			String sql1="DELETE FROM examstudent WHERE examCard=?";
+			int deleteCount =update(sql1, examCard);
+			if(deleteCount >0) {
+				System.out.println("刪除成功");
+			}else {
+				System.out.println("查無此人，請重新輸入");
+			}
+		}
 }
