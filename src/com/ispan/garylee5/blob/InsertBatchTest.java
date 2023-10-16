@@ -19,8 +19,6 @@ package com.ispan.garylee5.blob;
  * }
  */
 
-import static org.hamcrest.CoreMatchers.nullValue;
-
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;

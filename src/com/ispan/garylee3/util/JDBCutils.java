@@ -37,7 +37,7 @@ public class JDBCutils {
 
 		// 獲取連接
 		Connection conn = DriverManager.getConnection(url, user, password);
-		System.out.println("5" + conn);
+//		System.out.println("5" + conn);
 		return conn;
 	}
 	
