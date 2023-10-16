@@ -22,6 +22,7 @@ public class BlobTest {
 	
 	/*
 	 * 向customer表中插入Blob類型
+	 * 要留意照片大小 跟資料庫欄位類型是否相符
 	 */
 	@Test
 	public void testInsert() {
@@ -38,7 +39,6 @@ public class BlobTest {
 			ps.setObject(4, is);
 			ps.execute();
 		}catch (Exception e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}finally {
 			JDBCutils.closeResource(conn, ps);
