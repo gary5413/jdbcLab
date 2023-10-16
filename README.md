@@ -12,7 +12,10 @@
 	- 10/12 更新Exer2Test 新增Student 新增查詢功能
 	- 10/13 
 		- 更新Exer2Test 新增刪除功能
-		- 新增blob相功能 新增BlobTest 新增resource資料夾
+		- 新增blob相關功能 新增BlobTest 新增resource資料夾
+	- 10/16 
+		- 更新blob功能 blob查詢功能	
+		
 		
 ### 目錄
 待更新
