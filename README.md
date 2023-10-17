@@ -18,5 +18,7 @@
 		- 新增批次處理 新增批次功能四種方式
 		- 新增garylee6 交易功能
 		- 更新TransactionTest 
+	- 10/17 
+		- TransactionTest 更新隔離級別測試 但失敗
 ### 目錄
 待更新
