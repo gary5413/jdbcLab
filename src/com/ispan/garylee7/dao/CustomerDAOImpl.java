@@ -36,7 +36,7 @@ public class CustomerDAOImpl extends BaseDAO implements CustomerDAO{
 
 	@Override
 	public List<Customer> getAll(Connection conn) {
-		String sql="SELECT name,email,birth FROM customers ";
+		String sql="SELECT id,name,email,birth FROM customers ";
 		List<Customer> list = getForList(conn, Customer.class, sql);
 		return list;
 	}

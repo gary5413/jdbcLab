@@ -22,5 +22,6 @@
 		- TransactionTest 更新隔離級別測試 但失敗
 	- 10/18
 		- 新增garylee7.dao package 新增BaseDAO抽象類別 CustomerDAO介面和實作方法
+		- 新增customerDAO 單元測試
 ### 目錄
 待更新
