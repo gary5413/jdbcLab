@@ -24,5 +24,7 @@
 		- 新增garylee7.dao package 新增BaseDAO抽象類別 CustomerDAO介面和實作方法
 		- 新增customerDAO 單元測試
 		- 新增daoUpgrade 修改 baseDAO 獲取當前BaseDAO子類繼承的父類中的泛型 但未測試
+	- 10/19 
+		- 新增garylee8.connectionpool package 新增測試c3p0連線池功能
 ### 目錄
 待更新

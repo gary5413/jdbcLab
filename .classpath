@@ -14,10 +14,12 @@
 	<classpathentry kind="src" path="resource"/>
 	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
 	<classpathentry exported="true" kind="lib" path="lib/mysql-connector-j-8.1.0.jar"/>
+	<classpathentry kind="lib" path="lib/c3p0-0.9.5.5.jar"/>
 	<classpathentry exported="true" kind="con" path="org.eclipse.m2e.MAVEN2_CLASSPATH_CONTAINER">
 		<attributes>
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="lib" path="lib/mchange-commons-java-0.2.19.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
