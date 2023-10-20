@@ -18,6 +18,9 @@
 	<classpathentry kind="lib" path="lib/commons-dbcp2-2.10.0.jar"/>
 	<classpathentry kind="lib" path="lib/commons-pool2-2.12.0.jar"/>
 	<classpathentry kind="lib" path="lib/commons-logging-1.2.jar"/>
+	<classpathentry kind="lib" path="lib/HikariCP-4.0.3.jar"/>
+	<classpathentry kind="lib" path="lib/slf4j-api-2.0.9.jar"/>
+	<classpathentry kind="lib" path="lib/commons-dbutils-1.8.1.jar"/>
 	<classpathentry exported="true" kind="con" path="org.eclipse.m2e.MAVEN2_CLASSPATH_CONTAINER">
 		<attributes>
 			<attribute name="maven.pomderived" value="true"/>

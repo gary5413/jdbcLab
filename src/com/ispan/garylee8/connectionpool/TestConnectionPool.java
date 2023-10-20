@@ -12,12 +12,12 @@ import com.ispan.garylee8.connectionpool.util.JDBCutils;
 
 
 
-public class C3p0Test2 {
+public class TestConnectionPool {
 	
 	@Test
 	public void getCustomerById()  {
 		try {
-			Connection conn = JDBCutils.getConnection2();
+			Connection conn = JDBCutils.getConnection3();
 			String sql="SELECT id,name,email,birth FROM customers WHERE id= ? ";
 			PreparedStatement ps = conn.prepareStatement(sql);
 			ps.setInt(1, 29);

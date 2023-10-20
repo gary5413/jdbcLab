@@ -14,6 +14,8 @@ import org.apache.commons.dbcp2.BasicDataSource;
 import org.apache.commons.dbcp2.BasicDataSourceFactory;
 
 import com.mchange.v2.c3p0.ComboPooledDataSource;
+import com.zaxxer.hikari.HikariConfig;
+import com.zaxxer.hikari.HikariDataSource;
 
 public class JDBCutils {
 	/*
@@ -54,6 +56,21 @@ public class JDBCutils {
 //		創建一個DBCP連線池
 //		BasicDataSource source = BasicDataSourceFactory.createDataSource(properties);
 		Connection conn = source.getConnection();
+//		System.out.println(conn);
+		return conn;
+	}
+	/*
+	 * 使用hikariCP連線池
+	 */
+	private static HikariDataSource ds;
+	static {
+		HikariConfig config = new HikariConfig("src/hikariCP.properties");
+		ds = new HikariDataSource(config);
+	}
+	public static Connection getConnection3() throws SQLException {
+//		HikariConfig config = new HikariConfig("src/hikariCP.properties");
+//		HikariDataSource ds = new HikariDataSource(config);
+		Connection conn = ds.getConnection();
 //		System.out.println(conn);
 		return conn;
 	}
