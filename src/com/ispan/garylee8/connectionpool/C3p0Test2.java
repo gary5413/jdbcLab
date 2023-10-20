@@ -17,7 +17,7 @@ public class C3p0Test2 {
 	@Test
 	public void getCustomerById()  {
 		try {
-			Connection conn = JDBCutils.getConnection();
+			Connection conn = JDBCutils.getConnection2();
 			String sql="SELECT id,name,email,birth FROM customers WHERE id= ? ";
 			PreparedStatement ps = conn.prepareStatement(sql);
 			ps.setInt(1, 29);

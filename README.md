@@ -27,5 +27,7 @@
 	- 10/19 
 		- 新增garylee8.connectionpool package 新增c3p0連線池
 		- 測試c3p0連線池 新增C3p0Test2
+	- 10/20 
+		- 新增dbcp連線池 測試連線池
 ### 目錄
 待更新
