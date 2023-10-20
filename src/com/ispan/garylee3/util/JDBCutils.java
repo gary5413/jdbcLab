@@ -87,7 +87,6 @@ public class JDBCutils {
 			if(rs !=null)
 				rs.close();
 		} catch (SQLException e) {
-			// TODO: handle exception
 		}
 	}
 

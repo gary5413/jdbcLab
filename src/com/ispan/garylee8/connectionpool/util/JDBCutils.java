@@ -5,13 +5,16 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.sql.Connection;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.Properties;
 
 import javax.sql.DataSource;
 
 import org.apache.commons.dbcp2.BasicDataSource;
 import org.apache.commons.dbcp2.BasicDataSourceFactory;
+import org.apache.commons.dbutils.DbUtils;
 
 import com.mchange.v2.c3p0.ComboPooledDataSource;
 import com.zaxxer.hikari.HikariConfig;
@@ -73,5 +76,66 @@ public class JDBCutils {
 		Connection conn = ds.getConnection();
 //		System.out.println(conn);
 		return conn;
+	}
+	
+	
+	//關閉資源
+	public static void closeResource(Connection conn,Statement pstmt) {
+		try {
+			if(pstmt !=null)
+				pstmt.close();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		try {
+			if(conn !=null)
+				conn.close();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+	}
+	//關閉資源2
+	public static void closeResource(Connection conn,Statement pstmt,ResultSet rs) {
+		try {
+			if(pstmt !=null)
+				pstmt.close();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		try {
+			if(conn !=null)
+				conn.close();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		try {
+			if(rs !=null)
+				rs.close();
+		} catch (SQLException e) {
+		}
+	}
+	
+	/*
+	 * 使用dbutils 資源關閉
+	 */
+	public static void closeResource1(Connection conn,Statement pstmt,ResultSet rs) {
+//		try {
+//			DbUtils.close(conn);
+//		} catch (SQLException e) {
+//			e.printStackTrace();
+//		}
+//		try {
+//			DbUtils.close(pstmt);
+//		} catch (SQLException e) {
+//			e.printStackTrace();
+//		}
+//		try {
+//			DbUtils.close(rs);
+//		} catch (SQLException e) {
+//			e.printStackTrace();
+//		}
+		DbUtils.closeQuietly(conn);
+		DbUtils.closeQuietly(pstmt);
+		DbUtils.closeQuietly(rs);
 	}
 }
