@@ -11,11 +11,9 @@ import org.junit.Test;
 
 public class ConnectionTest {
 	
-
 	//方式ㄧ
 	@Test
 	public void testConnection1() throws SQLException {
-		
 		Driver driver=new com.mysql.jdbc.Driver();
 		// url 用於辨識哪個資料庫
 		/*
@@ -26,14 +24,11 @@ public class ConnectionTest {
 		 * db:DB name
 		 */
 		String url="jdbc:mysql://localhost:3306/mytestdb";
-		
 		Properties info=new Properties();
 		info.setProperty("user", "root");
 		info.setProperty("password", "5413gary");
-		
 		Connection conn=driver.connect(url, info);
 		System.out.println("1"+conn);
-		
 	};
 	
 	//方式二 
